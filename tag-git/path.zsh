@@ -3,4 +3,4 @@
 # located in an ArchLinux installation, at least).
 completion='/usr/share/git/completion/git-completion.zsh'
 
-[[ -f $completion ]] && source $completion
+[[ -f $completion ]] && fpath=( $completion $fpath )
