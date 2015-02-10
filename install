@@ -118,14 +118,23 @@ install_symlinks () {
   done
 }
 
+init () {
+  if stow -v -S 'init'; then
+    success "Initialization done"
+  else
+    fail "Failed to initialize stow"
+  fi
+}
+
 install_tags () {
   for tag in $(find "$DOTFILES_ROOT/" -maxdepth 1 -type d -name 'tag-*')
   do
-    stow -v -S $(basename "$tag")    
+    stow -v -S $(basename "$tag")
     success "Linking $(basename "$tag") done."
   done
 }
 
+init
 install_tags
 
 echo ''
