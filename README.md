@@ -30,7 +30,7 @@ You'll need `stow` for linking the files (and if you want to use the install scr
 
 To clone the repository and execute the [install script](## script) run this:
 ```sh
-git clone https://github.com/skaldarnar/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/skaldarnar/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
