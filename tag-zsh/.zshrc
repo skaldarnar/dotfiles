@@ -34,17 +34,10 @@ zshs=( $ZSH/tag-*/*.zsh )
 
 path_files=( ${(M)zshs:#*/path.zsh} )                     # find all `path.zsh`
 comp_files=( ${(M)zshs:#*/completion.zsh} )               # find all `completion.zsh`
-conf_files=( ${${zshs:#*/path.zsh}:#*/completion.zsh} )   # filter out `path.zsh` and
-                                                          #   `completion.zsh`
+conf_files=( ${${zshs:#*/path.zsh}:#*/completion.zsh} )   # filter out `path.zsh` and `completion.zsh`
 
 # Load the path files (named 'path.zsh')
 for file in $path_files
-do
-  source $file
-done
-
-# Load any other configuration files (named '*.zsh')
-for file in $conf_files
 do
   source $file
 done
@@ -53,12 +46,16 @@ done
 autoload -U compinit
 compinit
 
+# Load any other configuration files (named '*.zsh')
+for file in $conf_files
+do
+  source $file
+done
+
 # Load the completions files (named 'completion.zsh')
 for file in $comp_files
 do
   source $file
 done
-
-[[ -a $ANTIGEN_ZSH ]] && antigen-apply
 
 unset zshs path_files comp_files conf_files

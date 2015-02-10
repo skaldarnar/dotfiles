@@ -23,4 +23,6 @@ if [[ -a $ANTIGEN_ZSH ]]; then
 
   antigen bundle zsh-users/zsh-completions src
   antigen bundle zsh-users/zsh-syntax-highlighting
+
+  antigen apply
 fi
