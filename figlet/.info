@@ -1,0 +1,4 @@
+# stow into figlet font directory
+#   \> figlet -I2
+
+stow figlet -t /usr/share/figlet/fonts
