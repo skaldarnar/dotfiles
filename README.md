@@ -18,7 +18,7 @@
  ░░░░░░▒▒▒▒▓▓▓▓▓████
 ```
 
-> Your dotfiles are how your personalize your system. These are mine.
+> Your dotfiles are how you personalize your system. These are mine.
 
 I tinkered with my dotfiles for some time now. This repository is my personal approach on structuring and organizing the configuration files. I've got inspired by several awesome dotfiles repositories and I would like to [give credit](#thanks) to them.
 
@@ -26,27 +26,10 @@ Basically, I'm structuring the configurations into _topics_ (or _tags_) and use 
 
 # install
 
-You'll need `stow` for linking the files (and if you want to use the install script). Is is available for all GNU/Linux and most other Unix distributions via your packager manager. Furthermore, `git` is required for cloning this repository to your machine.
+You'll need `stow` for linking the files to the correct places. Is is available for all GNU/Linux and most other Unix distributions via your package manager. Furthermore, `git` is required for cloning this repository to your machine.
 
-To clone the repository and execute the [install script](## script) run this:
-```sh
-git clone --recursive https://github.com/skaldarnar/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./install
-```
-
-## concept
 By default, `stow` will create symlinks for lies in the parent directory of where you execute the command. This setup assumes the repository is located in the root of your home directory, e.g., `~/.dotfiles`, and all `stow` commands should be executed in that directory. Otherwise, you'll need to use the `-d` flag with the specific location of the repository.
 
-## script
-The `install` script will simply (try to) stow all the tags (directories whose name begins with `tag-...`) from the dotfiles repository. For now, system wide tags (directories named `sys-...`) are ignored in the script (they'll need root access in order to install). I'm planning to extend the script to ask you whether a tag should be linked or not, and to included the handling of system wide tags.
-
-Everything located in the `init` directory will be linked first. This is used to exclude all files named `.info` and `*.zsh` from the linking. The info files may contain specific information or explanations for tags. The `*.zsh` files are automatically included in the zsh configuration - have a look at `.zshrc` in `tag-zsh` for more information.
-
-To use the install script, simply run
-```sh
-./install
-```
 
 # topics, tags, and components
 
