@@ -25,4 +25,5 @@ export ZSH=$HOME/.zsh
 [[ -a $HOME/.localrc ]] && source $HOME/.localrc
 
 # Load configs
-for config (~/.zsh/*.zsh) source $config
+for config ($ZSH/*.zsh) source $config
+

@@ -1,8 +1,7 @@
 # Load Antigen as plug-in manager for ZSH
 #   https://github.com/zsh-users/antigen
 
-#ANTIGEN_ZSH="$ZSH/antigen/antigen.zsh"
-ANTIGEN_ZSH="$ZSH/.antigen/antigen.zsh"
+ANTIGEN_ZSH="$ZSH/antigen/antigen.zsh"
 
 if [[ -a $ANTIGEN_ZSH ]]; then
   source $ANTIGEN_ZSH
@@ -26,7 +25,7 @@ if [[ -a $ANTIGEN_ZSH ]]; then
   antigen bundle zsh-users/zsh-syntax-highlighting
 
   # Load the theme
-  antigen theme robbyrussel
+  antigen theme agnoster
 
   antigen apply
 fi
