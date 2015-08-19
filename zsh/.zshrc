@@ -16,8 +16,8 @@
 #
 # ░░░░░░▒▒▒▒▓▓▓▓▓████
 
-# Shortcut to the root of the dotfiles folder.
-export ZSH=$HOME/.dotfiles
+# Shortcut to the root of the zsh configuration files.
+export ZSH=$HOME/.zsh
 
 # Put your environment variables in `~/.localrc`. That way they'll stay of your
 # main dotfiles repository (which may be public, like this one), but you'll still
@@ -25,4 +25,4 @@ export ZSH=$HOME/.dotfiles
 [[ -a $HOME/.localrc ]] && source $HOME/.localrc
 
 # Load configs
-for config (~/.zsh/*.zsh) source config 
+for config (~/.zsh/*.zsh) source $config
