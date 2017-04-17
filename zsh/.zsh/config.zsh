@@ -8,6 +8,9 @@ SAVEHIST=10000
 setopt NO_BG_NICE           # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
+setopt NO_BEEP
+setopt NO_MATCH
+setopt NOTIFY
 setopt LOCAL_OPTIONS        # allow functions to have local options
 setopt LOCAL_TRAPS          # allow functions to have local traps
 setopt HIST_VERIFY
@@ -17,6 +20,8 @@ setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
+setopt AUTO_CD
+setopt EXTENDED_GLOB
 
 setopt APPEND_HISTORY                     # append history instad of override
 setopt INC_APPEND_HISTORY SHARE_HISTORY   # adds history incrementally and share it across sessions
