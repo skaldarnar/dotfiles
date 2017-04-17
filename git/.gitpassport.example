@@ -1,0 +1,27 @@
+#           ██   ██                                                                     ██  
+#    █████ ░░   ░██         ██████                            ██████                   ░██  
+#   ██░░░██ ██ ██████      ░██░░░██  ██████    ██████  ██████░██░░░██  ██████  ██████ ██████
+#  ░██  ░██░██░░░██░  █████░██  ░██ ░░░░░░██  ██░░░░  ██░░░░ ░██  ░██ ██░░░░██░░██░░█░░░██░ 
+#  ░░██████░██  ░██  ░░░░░ ░██████   ███████ ░░█████ ░░█████ ░██████ ░██   ░██ ░██ ░   ░██  
+#   ░░░░░██░██  ░██        ░██░░░   ██░░░░██  ░░░░░██ ░░░░░██░██░░░  ░██   ░██ ░██     ░██  
+#    █████ ░██  ░░██       ░██     ░░████████ ██████  ██████ ░██     ░░██████ ░███     ░░██ 
+#   ░░░░░  ░░    ░░        ░░       ░░░░░░░░ ░░░░░░  ░░░░░░  ░░       ░░░░░░  ░░░       ░░  
+#
+# A Git command and hook written in Python to manage multiple Git accounts/user identities. 
+#   https://github.com/frace/git-passport
+
+
+[general]
+enable_hook = True
+sleep_duration = 0.75
+
+[passport 0]
+email = email_0@example.com
+name = name_0
+service = github.com
+
+[passport 1]
+email = email_1@example.com
+name = name_1
+service = gitlab.com
+
