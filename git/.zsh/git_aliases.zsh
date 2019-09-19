@@ -6,5 +6,8 @@ if (( $+commands[hub] )); then
 fi
 
 # Some fun git aliases - shorten all the things!
-alias gco='git checkout'
 alias gits='git status -sb'
+
+alias gtr='git tree '
+alias ghst='git hist '
+alias gcfd='git clean -fd'

@@ -3,9 +3,9 @@
 # located in an ArchLinux installation, at least).
 
 # ArchLinux
-completion='/usr/share/git/completion/git-completion.zsh'
+#completion='/usr/share/git/completion/git-completion.zsh'
 
 # Homebrew
-#completioin='$(brew --prefix)/share/zsh/site-functions/_git'
+completion='$(brew --prefix)/share/zsh/site-functions/_git'
 
 [[ -f $completion ]] && fpath=( $completion $fpath )
